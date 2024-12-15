@@ -1,0 +1,18 @@
+{
+	"project": {
+		"name": "5069Y-competition-new",
+		"slot": 1,
+		"description": "5069Y robot code",
+		"platform": "V5",
+		"creationDate": "Thu, 21 Nov 2024 16:29:00 GMT",
+		"language": "cpp",
+		"sdkVersion": "V5_20240802_15_00_00",
+		"cpp": {
+			"includePath": []
+		}
+	},
+	"extension": {
+		"version": "0.6.1",
+		"json": 1
+	}
+}
