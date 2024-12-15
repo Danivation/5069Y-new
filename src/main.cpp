@@ -4,6 +4,17 @@
 #include "vex.h"
 using namespace vex;
 
+
+
+
+
+
+
+void ModeSelector()
+{
+  
+}
+
 void auton()
 {
   // wait for field control or competition switch
@@ -18,7 +29,27 @@ void driver()
 
 int main()
 {
-  Controller1.Screen.clearLine(1);
+  // initialize things i guess
+  Competition.autonomous(auton);
+  Competition.drivercontrol(driver);
+  competition::bStopAllTasksBetweenModes = true;    // stops auton tasks before driver starts
+
+  // setup things
+  L.setStopping(brake);
+  R.setStopping(brake);
+  MogoOut.set(false);
+  MogoIn.set(true);
+  Doinker.set(false);
+  ConveyorMotor.setStopping(hold);
+  ConveyorMotor.setVelocity(200, rpm);
+  LBMotor.setStopping(hold);
+  LBMotor.setVelocity(100, rpm);
+  RingColor.setLightPower(100, percent);
+  RingColor.setLight(ledState::on);
+  FrontVision.modelDetection(true);
+
+
+
   while (true)
   {
     wait(20, msec);
