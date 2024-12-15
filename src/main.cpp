@@ -6,12 +6,14 @@ using namespace vex;
 
 void auton()
 {
-
+  // wait for field control or competition switch
+  waitUntil((Competition.isFieldControl() || Competition.isCompetitionSwitch()) && Competition.isEnabled());
 }
 
 void driver()
 {
-
+  // wait for field control or competition switch
+  waitUntil((Competition.isFieldControl() || Competition.isCompetitionSwitch()) && Competition.isEnabled());
 }
 
 int main()
